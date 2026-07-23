@@ -75,3 +75,14 @@ count(case when marks>80 then 1 else null end) as Dept_HighScore_Count
 from student
 group by department;
 ```
+
+
+## Question 3
+
+![Question 3](3.3.png)
+
+```sql
+SELECT name AS Customers FROM Customers
+WHERE id NOT IN (SELECT customerId FROM Orders);
+```
+
