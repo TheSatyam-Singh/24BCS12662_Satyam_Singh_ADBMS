@@ -14,7 +14,7 @@ INSERT INTO employees (emp_id, emp_name, emp_salary, emp_city) VALUES
 (106, 'Sneha Reddy', 105000.00, 'Bangalore'),
 (107, 'Rohan Das', 72000.00, 'Kolkata')
 
--- having is used to discard groups
+
 SELECT emp_city,COUNT(*) as cnt
 FROM EMPLOYEES
 GROUP BY emp_city
@@ -26,13 +26,3 @@ SELECT emp_city,COUNT(*) as cnt
 FROM EMPLOYEES
 GROUP BY emp_city
 ORDER BY EMP_CITY;
-
-
-
-
-
-
-
-------------------------------------------------------------
-
-Experiment 2->
