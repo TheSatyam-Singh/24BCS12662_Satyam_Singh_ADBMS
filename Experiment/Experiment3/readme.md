@@ -86,3 +86,11 @@ SELECT name AS Customers FROM Customers
 WHERE id NOT IN (SELECT customerId FROM Orders);
 ```
 
+
+# Question 4
+
+![Question 3](3.4.png)
+
+```sql
+select employee.name, bonus.bonus from employee left join bonus on employee.empid=bonus.empid where bonus.bonus<1000 or bonus.bonus is null;
+```
