@@ -1,17 +1,24 @@
 # Experiment 3
 
+**Name:** Satyam Singh  
+**UID:** 24BCS12662
+
+## Aim
+
+Practice SQL aggregation, filtering, and query-writing problems using `GROUP BY`, aggregate functions, and joins/subqueries.
+
 ## Question 1
 
 ![Question 1](3.1.png)
 
-## Answer 1 (SQL)
+### Answer 1 (SQL)
 
 ```sql
 CREATE TABLE employees (
     emp_id INT PRIMARY KEY,
     emp_name VARCHAR(100) NOT NULL,
     emp_salary DECIMAL(10, 2) NOT NULL,
-      emp_city VARCHAR(100) NOT NULL
+    emp_city VARCHAR(100) NOT NULL
 );
 
 INSERT INTO employees (emp_id, emp_name, emp_salary, emp_city) VALUES
@@ -23,74 +30,84 @@ INSERT INTO employees (emp_id, emp_name, emp_salary, emp_city) VALUES
 (106, 'Sneha Reddy', 105000.00, 'Bangalore'),
 (107, 'Rohan Das', 72000.00, 'Kolkata');
 
-SELECT emp_city, count(*) as cnt
-FROM EMPLOYEES
+SELECT emp_city, COUNT(*) AS cnt
+FROM employees
 GROUP BY emp_city;
 
-SELECT emp_city, count(*) as cnt
-FROM EMPLOYEES
+SELECT emp_city, COUNT(*) AS cnt
+FROM employees
 GROUP BY emp_city
-ORDER BY CNT ASC;
+ORDER BY cnt ASC;
 
-SELECT emp_city, count(EMP_ID) as cnt
-FROM EMPLOYEES
+SELECT emp_city, COUNT(emp_id) AS cnt
+FROM employees
 GROUP BY emp_city
-ORDER BY CNT;
+ORDER BY cnt;
 
-SELECT emp_city, SUM(CASE WHEN EMP_SALARY>=90000 THEN 1 ELSE 0 END) AS CNT
-FROM EMPLOYEES
+SELECT emp_city, SUM(CASE WHEN emp_salary >= 90000 THEN 1 ELSE 0 END) AS cnt
+FROM employees
 GROUP BY emp_city
-ORDER BY CNT DESC,EMP_CITY DESC;
+ORDER BY cnt DESC, emp_city DESC;
 
-SELECT emp_city, COUNT(CASE WHEN EMP_SALARY>=90000 THEN 1 END) AS CNT
-FROM EMPLOYEES
+SELECT emp_city, COUNT(CASE WHEN emp_salary >= 90000 THEN 1 END) AS cnt
+FROM employees
 GROUP BY emp_city;
 
-SELECT emp_city, MAX(EMP_SALARY) AS MAX_SALARY
-FROM EMPLOYEES
+SELECT emp_city, MAX(emp_salary) AS max_salary
+FROM employees
 GROUP BY emp_city;
 
-SELECT emp_city, MIN(EMP_SALARY) AS MIN_SALARY
-FROM EMPLOYEES
+SELECT emp_city, MIN(emp_salary) AS min_salary
+FROM employees
 GROUP BY emp_city;
 
-SELECT emp_city, MIN(EMP_SALARY) AS MIN_SALARY
-FROM EMPLOYEES
+SELECT emp_city, MIN(emp_salary) AS min_salary
+FROM employees
 GROUP BY emp_city
-HAVING MIN(EMP_SALARY)>=85000;
+HAVING MIN(emp_salary) >= 85000;
 
-SELECT DISTINCT EMP_CITY
-FROM EMPLOYEES;
+SELECT DISTINCT emp_city
+FROM employees;
 ```
 
 ## Question 2
 
 ![Question 2](3.2.png)
 
-## Answer 2 (SQL)
+### Answer 2 (SQL)
 
 ```sql
 SELECT department,
-count(case when marks>80 then 1 else null end) as Dept_HighScore_Count
-from student
-group by department;
+       COUNT(CASE WHEN marks > 80 THEN 1 ELSE NULL END) AS Dept_HighScore_Count
+FROM student
+GROUP BY department;
 ```
-
 
 ## Question 3
 
 ![Question 3](3.3.png)
 
+### Answer 3 (SQL)
+
 ```sql
-SELECT name AS Customers FROM Customers
+SELECT name AS Customers
+FROM Customers
 WHERE id NOT IN (SELECT customerId FROM Orders);
 ```
 
+## Question 4
 
-# Question 4
+![Question 4](3.4.png)
 
-![Question 3](3.4.png)
+### Answer 4 (SQL)
 
 ```sql
-select employee.name, bonus.bonus from employee left join bonus on employee.empid=bonus.empid where bonus.bonus<1000 or bonus.bonus is null;
+SELECT employee.name, bonus.bonus
+FROM employee
+LEFT JOIN bonus ON employee.empid = bonus.empid
+WHERE bonus.bonus < 1000 OR bonus.bonus IS NULL;
 ```
+
+## Result
+
+All four SQL tasks were completed successfully, and the queries produced the expected outputs.
