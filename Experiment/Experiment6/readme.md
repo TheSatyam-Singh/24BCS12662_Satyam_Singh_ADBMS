@@ -1,0 +1,78 @@
+# Experiment 6
+
+**Name:** Satyam Singh  
+**UID:** 24BCS12662
+
+## Aim
+
+Practice creation and usage of SQL views and materialized views.
+
+## Problem Statements
+
+1. Create a standard SQL view and query data from it.
+2. Create materialized views using both `WITH DATA` and `WITH NO DATA`, then refresh them.
+
+## SQL Queries
+
+### 1) Create and Query a View ([6.1.sql](6.1.sql))
+
+```sql
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(100) NOT NULL,
+    emp_salary DECIMAL(10, 2) NOT NULL,
+    emp_city VARCHAR(100) NOT NULL
+);
+
+INSERT INTO employees111 (emp_id, emp_name, emp_salary, emp_city) VALUES
+(101, 'Amit Sharma', 85000.00, 'Mumbai'),
+(102, 'Priya Patel', 95000.00, 'Mumbai'),
+(103, 'Rahul Verma', 60000.00, 'Delhi'),
+(104, 'Ananya Iyer', 110000.00, 'Bangalore'),
+(105, 'Vikram Singh', 55000.00, 'Delhi'),
+(106, 'Sneha Reddy', 105000.00, 'Bangalore'),
+(107, 'Rohan Das', 72000.00, 'Kolkata');
+
+CREATE VIEW employee_view AS
+SELECT emp_id, emp_name, emp_salary
+FROM employees111
+WHERE emp_salary >= 100000;
+
+SELECT * FROM employee_view;
+```
+
+### 2) Materialized Views and Refresh ([6.2.sql](6.2.sql))
+
+```sql
+CREATE MATERIALIZED VIEW EMP_VIEW_617B_MV AS
+SELECT EMP_ID, EMP_NAME
+FROM EMPLOYEES
+WHERE EMP_ID = 101
+WITH DATA;
+
+SELECT * FROM EMP_VIEW_617B_MV;
+
+REFRESH MATERIALIZED VIEW EMP_VIEW_617B_MV;
+
+CREATE MATERIALIZED VIEW EMP_VIEW_617B_MV_2 AS
+SELECT EMP_ID, EMP_NAME
+FROM EMPLOYEES
+WHERE EMP_ID = 101
+WITH NO DATA;
+
+SELECT * FROM EMP_VIEW_617B_MV_2;
+
+REFRESH MATERIALIZED VIEW EMP_VIEW_617B_MV_2;
+```
+
+## Output Screenshots
+
+### Output 6.1
+![Output 6.1](6.1.png)
+
+### Output 6.2
+![Output 6.2](6.2.png)
+
+## Result
+
+The view and materialized view operations were completed successfully, and outputs were verified.

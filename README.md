@@ -11,6 +11,8 @@
 | 2 | SQL Set Operations (UNION, UNION ALL, INTERSECT, EXCEPT) | 2026-07-30 | [Experiment 2](Experiment/Experiment2/readme.md) |
 | 3 | SQL Aggregation and GROUP BY Practice | 2026-07-30 | [Experiment 3](Experiment/Experiment3/readme.md) |
 | 4 | SQL Joins (INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF) | 2026-07-30 | [Experiment 4](Experiment/Experiment4/readme.md) |
+| 5 | SQL Query Practice and Conditional Logic | 2026-07-30 | [Experiment 5](Experiment/Experiment5/readme.md) |
+| 6 | SQL Views and Materialized Views | 2026-07-30 | [Experiment 6](Experiment/Experiment6/readme.md) |
 
 ## Homework
 
