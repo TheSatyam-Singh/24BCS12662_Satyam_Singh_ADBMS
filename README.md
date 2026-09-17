@@ -13,6 +13,8 @@
 | 4 | SQL Joins (INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF) | 2026-07-30 | [Experiment 4](Experiment/Experiment4/readme.md) |
 | 5 | SQL Query Practice and Conditional Logic | 2026-07-30 | [Experiment 5](Experiment/Experiment5/readme.md) |
 | 6 | SQL Views and Materialized Views | 2026-07-30 | [Experiment 6](Experiment/Experiment6/readme.md) |
+| 7 | SQL/PLSQL Cursor and Procedure Practice | 2026-07-30 | [Experiment 7](Experiment/Experiment7/readme.md) |
+| 8 | SQL/PLSQL Cursor Top Records Retrieval | 2026-07-30 | [Experiment 8](Experiment/Experiment8/readme.md) |
 
 ## Homework
 

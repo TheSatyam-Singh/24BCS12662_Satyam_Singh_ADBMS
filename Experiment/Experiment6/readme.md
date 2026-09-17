@@ -24,7 +24,7 @@ CREATE TABLE employees (
     emp_city VARCHAR(100) NOT NULL
 );
 
-INSERT INTO employees111 (emp_id, emp_name, emp_salary, emp_city) VALUES
+INSERT INTO employees (emp_id, emp_name, emp_salary, emp_city) VALUES
 (101, 'Amit Sharma', 85000.00, 'Mumbai'),
 (102, 'Priya Patel', 95000.00, 'Mumbai'),
 (103, 'Rahul Verma', 60000.00, 'Delhi'),
@@ -35,7 +35,7 @@ INSERT INTO employees111 (emp_id, emp_name, emp_salary, emp_city) VALUES
 
 CREATE VIEW employee_view AS
 SELECT emp_id, emp_name, emp_salary
-FROM employees111
+FROM employees
 WHERE emp_salary >= 100000;
 
 SELECT * FROM employee_view;
