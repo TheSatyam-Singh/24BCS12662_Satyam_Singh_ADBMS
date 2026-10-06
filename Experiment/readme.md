@@ -12,3 +12,4 @@ This folder contains ADBMS lab experiments completed by Satyam Singh (UID: 24BCS
 6. [Experiment 6](Experiment6/readme.md) - SQL Views and Materialized Views  
 7. [Experiment 7](Experiment7/readme.md) - Cursor and Procedure Practice  
 8. [Experiment 8](Experiment8/readme.md) - Cursor-Based Top Records Retrieval  
+9. [Experiment 9](Experiment9/readme.md) - Row-Level BEFORE UPDATE Trigger with Salary Hike Limit  

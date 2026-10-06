@@ -15,6 +15,7 @@
 | 6 | SQL Views and Materialized Views | 2026-07-30 | [Experiment 6](Experiment/Experiment6/readme.md) |
 | 7 | SQL/PLSQL Cursor and Procedure Practice | 2026-07-30 | [Experiment 7](Experiment/Experiment7/readme.md) |
 | 8 | SQL/PLSQL Cursor Top Records Retrieval | 2026-07-30 | [Experiment 8](Experiment/Experiment8/readme.md) |
+| 9 | Row-Level BEFORE UPDATE Trigger with Salary Hike Limit | 2026-10-06 | [Experiment 9](Experiment/Experiment9/readme.md) |
 
 ## Homework
 
